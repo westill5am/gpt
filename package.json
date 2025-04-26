@@ -1,15 +1,17 @@
 {
   "name": "gpt-logger",
   "version": "1.0.0",
-  "description": "Logs GPT responses to Discord Webhook",
+  "description": "A simple logger that sends GPT chat logs to Discord",
   "main": "gpt_logging.js",
+  "type": "module",
   "scripts": {
     "start": "node gpt_logging.js"
   },
   "dependencies": {
+    "openai": "^4.19.1",
     "express": "^4.18.2",
     "body-parser": "^1.20.2",
-    "dotenv": "^16.4.1",
-    "node-fetch": "^2.6.9"
+    "dotenv": "^16.4.0",
+    "node-fetch": "^3.3.2"
   }
 }
