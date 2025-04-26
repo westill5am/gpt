@@ -1,15 +1,15 @@
 {
   "name": "gpt-logger",
   "version": "1.0.0",
-  "main": "auto-logger.js",
-  "type": "module",
+  "description": "Logs GPT responses to Discord Webhook",
+  "main": "gpt_logging.js",
   "scripts": {
-    "start": "node auto-logger.js"
+    "start": "node gpt_logging.js"
   },
   "dependencies": {
     "express": "^4.18.2",
     "body-parser": "^1.20.2",
-    "node-fetch": "^2.6.7",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.4.1",
+    "node-fetch": "^2.6.9"
   }
 }
