@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 8080;
 const WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
 const LOGGER_SECRET = (process.env.LOGGER_SECRET || '').trim();
 
