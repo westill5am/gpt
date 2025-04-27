@@ -12,12 +12,10 @@ const SECRET = process.env.LOGGER_SECRET;
 
 app.use(bodyParser.json());
 
-// Health check
 app.get('/', (req, res) => {
   res.status(200).send('OK');
 });
 
-// Logging route
 app.post('/log', async (req, res) => {
   const authHeader = req.headers['authorization'];
   if (!authHeader || authHeader !== `Bearer ${SECRET}`) {
@@ -51,5 +49,4 @@ app.post('/log', async (req, res) => {
   }
 });
 
-// Only one listen!
 app.listen(PORT, () => console.log(`🚀 Logger listening on port ${PORT}`));
