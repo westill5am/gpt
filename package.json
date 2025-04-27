@@ -1,7 +1,6 @@
 {
   "name": "gpt-logger",
   "version": "1.0.0",
-  "description": "A simple logger that sends GPT chat logs to Discord",
   "main": "gpt_logging.js",
   "type": "module",
   "scripts": {
