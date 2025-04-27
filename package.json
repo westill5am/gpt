@@ -1,5 +1,5 @@
 {
-  "name": "gpt-logger",
+  "name": "discord-webhook-logger",
   "version": "1.0.0",
   "main": "gpt_logging.js",
   "type": "module",
