@@ -6,7 +6,8 @@ import fetch from 'node-fetch';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => console.log(`🚀 Logger listening on port ${PORT}`));
 const WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
 const SECRET = process.env.LOGGER_SECRET;
 
