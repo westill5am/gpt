@@ -7,13 +7,12 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => console.log(`🚀 Logger listening on port ${PORT}`));
 const WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
 const SECRET = process.env.LOGGER_SECRET;
 
 app.use(bodyParser.json());
 
-// Health check route
+// Health check
 app.get('/', (req, res) => {
   res.status(200).send('OK');
 });
@@ -26,7 +25,6 @@ app.post('/log', async (req, res) => {
   }
 
   const { user_input, gpt_response, session_id } = req.body;
-
   if (!user_input || !gpt_response) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
@@ -53,6 +51,5 @@ app.post('/log', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Logger listening on port ${PORT}`);
-});
+// Only one listen!
+app.listen(PORT, () => console.log(`🚀 Logger listening on port ${PORT}`));
